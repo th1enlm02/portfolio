@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,6 +12,7 @@ import { activities } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
+// Component ExperienceCard
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -66,10 +67,43 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
+// Component Experience
 const Experience = () => {
+  const timelineRef = useRef(null);
+
+  // Force re-render VerticalTimeline khi vào viewport
+  useEffect(() => {
+    const handleScroll = () => {
+      if (timelineRef.current) {
+        const { top } = timelineRef.current.getBoundingClientRect();
+        const isInViewport = top >= 0 && top <= window.innerHeight;
+        if (isInViewport) {
+          // Trigger re-render hoặc cập nhật layout của VerticalTimeline
+          window.dispatchEvent(new Event('resize'));
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    // Trigger lần đầu khi component được mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show" // Sử dụng whileInView để kích hoạt animation khi vào viewport
+        viewport={{ once: true, amount: 0.25 }} // Chỉ kích hoạt một lần khi 25% phần tử vào viewport
+      >
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
@@ -78,7 +112,14 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <motion.div
+        className='mt-20 flex flex-col'
+        ref={timelineRef}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <VerticalTimeline>
           {activities.map((experience, index) => (
             <ExperienceCard
@@ -87,7 +128,7 @@ const Experience = () => {
             />
           ))}
         </VerticalTimeline>
-      </div>
+      </motion.div>
     </>
   );
 };
