@@ -52,6 +52,16 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
+      {experience.image && (
+        <div className='mt-5 flex justify-center'>
+          <img
+            src={experience.image}
+            alt={`${experience.title} proof`}
+            className='max-w-full w-[300px] h-auto rounded-lg shadow-md object-cover'
+          />
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
@@ -82,4 +92,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "activities");

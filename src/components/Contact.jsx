@@ -74,6 +74,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <span className='text-white font-medium mb-4'>minhthienluu2406@gmail.com</span>
 
         <form
           ref={formRef}

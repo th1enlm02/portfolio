@@ -7,6 +7,11 @@ import {
   network,
   atom,
   honor,
+  academy_honor,
+  dormitory_honor_2022_2023,
+  dormitory_honor_2023_2024,
+  devops_atom,
+  netchallenge2023,
   ansible,
   api6,
   argocd,
@@ -59,8 +64,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "activities",
+    title: "Activities",
   },
   {
     id: "contact",
@@ -265,6 +270,7 @@ const activities = [
       "Awarded the prestigious MIRAE ASSET Scholarship.",
       "Granted a full Cỏ May Dormitory Scholarship for underprivileged students with outstanding academic performance."
     ],
+    image: academy_honor,
   },
   {
     title: "Certificate of Academic Excellence (2022 – 2023)",
@@ -276,6 +282,7 @@ const activities = [
       "Awarded for achieving GPA 9.02 and Conduct Score >90 during the full academic year.",
       "Recognized as an outstanding student with excellent academic and personal achievements.",
     ],
+    image: dormitory_honor_2022_2023,
   },
   {
     title: "Top 3 - NET Challenge 2023 (BotN)",
@@ -287,6 +294,7 @@ const activities = [
       "Achieved Top 3 as part of a 3-member team in the final round of a competitive challenge focused on network configuration and troubleshooting",
       "The network administration competition includes two rounds. Round 1 is a theoretical test on networking knowledge. The final round involves hands-on configuration of a physical network. Teams must demonstrate both technical expertise and practical skills to win.",
     ],
+    image: netchallenge2023,
   },
   {
     title: "Certificate of Academic Excellence (2023 – 2024)",
@@ -298,6 +306,7 @@ const activities = [
       "Awarded for achieving GPA 9.05 and Conduct Score >90 during the full academic year.",
       "Honored for consistent excellence and strong performance throughout the year.",
     ],
+    image: dormitory_honor_2023_2024,
   },
   {
     title: "DevOps Engineer",
@@ -311,6 +320,7 @@ const activities = [
       "Implemented and managed proxy servers and monitoring tools to enhance system performance and reliability.",
       "Developed automation scripts using Bash, Python, Ansible, and Terraform to streamline infrastructure deployment and management."
     ],
+    image: devops_atom,
   },
 ];
 
