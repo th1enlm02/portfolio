@@ -11,6 +11,7 @@ import {
   dormitory_honor_2022_2023,
   dormitory_honor_2023_2024,
   devops_atom,
+  devops_trip,
   netchallenge2023,
   ansible,
   api6,
@@ -291,7 +292,7 @@ const activities = [
     iconBg: "#383E56",
     date: "October 2023",
     points: [
-      "Achieved Top 3 as part of a 3-member team in the final round of a competitive challenge focused on network configuration and troubleshooting",
+      "Achieved Top 3 as part of a 3-member team in the final round of a competitive challenge focused on network configuration and troubleshooting.",
       "The network administration competition includes two rounds. Round 1 is a theoretical test on networking knowledge. The final round involves hands-on configuration of a physical network. Teams must demonstrate both technical expertise and practical skills to win.",
     ],
     image: netchallenge2023,
@@ -321,6 +322,19 @@ const activities = [
       "Developed automation scripts using Bash, Python, Ansible, and Terraform to streamline infrastructure deployment and management."
     ],
     image: devops_atom,
+  },
+  {
+    title: `"Company" Trip`,
+    issuer: "ATOM Solution - DevOps Team",
+    icon: atom,
+    iconBg: "#383E56",
+    date: "March 2025",
+    points: [
+      "An unforgettable trip to Vũng Tàu with the DevOps team — more than just colleagues, they are brothers, mentors, and friends who have supported me throughout the journey.",
+      "This trip was not only a break from work but also a bonding experience that strengthened our team spirit and connection.",
+      "Grateful for the time, laughter, and memories shared together — truly one of the highlights of my time at ATOM Solution."
+    ],
+    image: devops_trip,
   },
 ];
 
