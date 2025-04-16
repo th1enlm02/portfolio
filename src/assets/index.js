@@ -55,6 +55,7 @@ import dormitory_honor_2023_2024 from "./activity/dormitory_honor_2023_2024.png"
 import devops_atom from "./activity/devops_atom.png";
 import netchallenge2023 from "./activity/netchallenge2023.png";
 import devops_trip from "./activity/devops_trip.png";
+import high_school from "./activity/high_school.png";
 
 import network_design from "./project/network_design.png";
 import teamv from "./project/teamv.png";
@@ -79,6 +80,7 @@ export {
   devops_atom,
   netchallenge2023,
   devops_trip,
+  high_school,
   ansible,
   api6,
   argocd,

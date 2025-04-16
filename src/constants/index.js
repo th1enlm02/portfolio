@@ -13,6 +13,7 @@ import {
   devops_atom,
   devops_trip,
   netchallenge2023,
+  high_school,
   ansible,
   api6,
   argocd,
@@ -258,6 +259,21 @@ const technologies = [
 ];
 
 const activities = [
+  {
+    title: "High School Days",
+    issuer: "Vong The High School",
+    icon: student,
+    iconBg: "#383E56",
+    date: "2017 – 2020",
+    points: [
+      "Ranked top 2 in class every single year – yeah, I was that student 😎.",
+      "Used to ball a lot after class – basketball was my thing. Took a break for now, but who knows, I might hit the court again someday!",
+      "Big fan of movies and music – Hollywood films are my jam, and I’m deep into rap (especially underground & US rap).",
+      `Totally obsessed with TV series like "Breaking Bad", "Peaky Blinders", "True Detective"... absolute masterpieces!`,
+      "High school was a fun mix of hard work, hobbies, and hype – a pretty dope time overall!"
+    ],
+    image: high_school,
+  },
   {
     title: "Student",
     issuer: "University of Information Technology, VNU-HCM",
