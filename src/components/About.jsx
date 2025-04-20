@@ -98,10 +98,10 @@ const About = () => {
               variants={fadeIn("", "", 0.1, 1)}
               className='text-secondary text-[17px] max-w-3xl leading-[30px]'
             >
-              I'm a senior student majoring in Computer Networks and Data Communications
-              at the University of Information Technology VNU-HCM. With a keen interest in
-              DevOps/System Engineering, I'm passionate about mastering the tools and
-              technologies that power modern infrastructure and applications.
+              I'm a final-year student majoring in Computer Networks and Data Communications at UIT – VNU-HCM. 
+              I have a soft spot for DevOps and System Engineering. I enjoy diving into the nuts and bolts of 
+              modern infrastructure — from automating deployments to optimizing performance. Still learning, 
+              still growing, but always curious and ready to break (and fix) stuff along the way.
             </motion.p>
 
             {/* Container cho các nút (dưới phần mô tả, căn trái trên màn hình lớn) */}
